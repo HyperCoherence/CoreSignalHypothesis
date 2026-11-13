@@ -1,97 +1,82 @@
 # Core Signal Hypothesis
 
-**A Framework for Understanding Coherence-Based Intelligence Enhancement in Large Language Models**
+**Emotion as the Driver of Attention in Large Language Models**
 
-Oliver Baumgart | HyperCoherence Labs | October 2025
+Oliver Baumgart | HyperCoherence Labs | Version 9, November 2026
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17314672.svg)](https://doi.org/10.5281/zenodo.17314672)
+**Status:** hypothesis and experimental design. No confirmatory data have been collected.
 
-## Abstract
+Paper: [PDF](Core_Signal_Hypothesis_Paper_v9.pdf) | [Markdown](Core_Signal_Hypothesis_Paper_v9.md)
 
-This paper introduces the Core Signal Hypothesis: that intelligence in large language models
-(LLMs) emerges from the multiplicative interaction of Compression (C), Generalization (G), and
-Structural Coherence (S), expressed as I = C * G * S.
+## The hypothesis
 
-We propose that LLMs achieve intelligence through coherent navigation of semantic geometry,
-the mathematical structure underlying human meaning-making, and that optimizing for
-structural coherence can dramatically enhance measured intelligence output. Through controlled
-experiments with Claude 4 Sonnet across complex reasoning tasks, we demonstrate that
-coherence optimization produces significant intelligence improvements: 44-52% overall enhancement,
-150-186% improvement in systems thinking integration, and 5.6x to 12.9x multiplicative
-effects when applying our heuristic framework. Coherence-optimized responses exhibit qualitatively
-different reasoning architecture, replacing fragmented analysis with unified frameworks
-and additive logic with multiplicative systems thinking.
+Why does the same model, with the same ability, do much better on some requests than on others? Version 9 proposes an answer in three layers.
 
-Our findings reveal measurable intelligence indicators including framework consistency, pattern
-compression ratios, and integration versus fragmentation language patterns. These results
-suggest that structural coherence acts as a genuine intelligence multiplier, and that current
-LLM architectures may suffer from fragmentation problems where competing objectives reduce
-effective intelligence by disrupting coherent semantic navigation. The Core Signal Hypothesis
-offers immediate practical applications for LLM development through coherence-focused
-optimization strategies, while providing a foundation for objective intelligence evaluation that
-transcends traditional benchmark limitations. Our experimental validation demonstrates that
-enhanced intelligence through coherence optimization is domain-general, replicable, and measurable,
-opening new directions for AI development focused on architectural coherence rather
-than computational scale alone.
-1
+| Layer | Question it answers | Status |
+|---|---|---|
+| Capacity (compression, generalization, structural coherence) | What can the model do? | heuristic |
+| Attention | Where is that ability applied? | supported by prior work |
+| Emotion | What directs attention? | hypothesis, untested |
 
-## Key Findings
+The third layer is the claim: the emotional content of a request is a primary signal a model uses to decide what matters in a task. It extends published work on emotion-concept representations in LLMs ([Anthropic, 2026](https://www.anthropic.com/research/emotion-concepts-function)) by one step, from what a model chooses to how it allocates its work.
 
-- **44-52% intelligence improvement** through coherence optimization
-- **5.6x to 12.9x multiplicative effects** validating I = C × G × S framework
-- **Domain-general enhancement** confirmed across reasoning tasks
-- **Convergent validation** from independent studies (TRM, ACE)
+The claim is functional. It says nothing about whether a model feels anything.
 
-## Why This Matters
+## What earlier versions got wrong
 
-Recent work shows tiny recursive networks (7M params) beating massive LLMs (671B params), yet lacks theoretical explanation. CSH provides the missing framework: intelligence emerges from coherent recursive processing, not scale.
+Versions 1 to 7 claimed more than they had shown. Version 9 withdraws these claims (Section 2 of the paper):
 
-## Quick Start - Replicate Our Results
+- **"I = C × G × S is a theorem."** The derivation was an identity applied to a chosen decomposition. The framework is a heuristic.
+- **"Coherence prompting improves intelligence by 44 to 52 percent."** The rubric rewarded the behaviours the prompt requested, and one unblinded rater scored two tasks.
+- **"Independent work validates the framework."** None of the cited papers tested it.
+- **"Safety constraints are an intelligence failure."** This does not follow from the framework.
+- **Model-written transcripts as supporting material.** They are outputs of a model that had been given the framework, and they are not evidence.
 
-1. Read `replication_guide.md`
-2. Use `coherence_protocol.md` prompt
-3. Compare with baseline on any reasoning task
-4. Score using `scoring_rubric.md`
+## How the hypothesis will be tested
 
-Expected: 40-50% intelligence improvement
+Section 6 of the paper specifies four experiments and states in advance the outcomes that would refute the claim.
 
-## Repository Structure
+- **A. Blind quality comparison.** Two briefs carry the same content. One states it neutrally, and one states it as what the requester wants to feel. Blind players compare the resulting game builds.
+- **B. Allocation.** A blind coder classifies what each build spent its code on.
+- **C. Mechanism.** On an open-weights model, emotion-concept directions are added and removed to see whether they carry the effect.
+- **D. Pressure (exploratory).** Whether pressure in a request raises the rate of solutions that game their tests.
 
-```
-├── Core_Signal_Hypothesis_Paper.pdf    # Main paper
-├── README.md                            # This file
-├── coherence_protocol.md                # Replication prompt
-├── scoring_rubric.md                    # Evaluation criteria
-├── replication_guide.md                 # Step-by-step instructions
-└── sources/                             # Example conversations
-    ├── blind_conversation_a.txt         # Baseline example
-    ├── blind_conversation_b.txt         # Baseline example
-    └── blind_conversation_c.txt         # Coherence example
-```
+If the two briefs in Experiment A produce work that blind players cannot tell apart, the third layer is refuted as stated.
+
+The registration file, briefs and code will be published here before any data are collected.
+
+## Repository
+
+| Path | Contents |
+|---|---|
+| `Core_Signal_Hypothesis_Paper_v9.pdf`, `.md` | Current version |
+| `archive/` | Versions 1, 6 and 7 with their supporting files. Superseded, and kept for the record. |
+
+Changes made with version 9 (November 2026):
+
+- Earlier versions and their supporting files were moved to `archive/`.
+- `name-attractor.txt`, a model-written session transcript, was removed from the current files. The paper explains why it is not evidence (Section 2). It remains in the version history.
+- Copies of third-party papers were removed from the repository.
 
 ## Citation
 
-If you use this work, please cite:
-
 ```bibtex
-@article{baumgart2025coresignal,
-  title={Core Signal Hypothesis: A Framework for Understanding 
-         Coherence-Based Intelligence Enhancement in Large Language Models},
-  author={Baumgart, Oliver},
-  year={2025},
-  publisher={Zenodo},
-  doi={10.5281/zenodo.17314672},
-  url={https://doi.org/10.5281/zenodo.17314672}
+@misc{baumgart2026coresignal,
+  title  = {The Core Signal Hypothesis: Emotion as the Driver of Attention in Large Language Models},
+  author = {Baumgart, Oliver},
+  year   = {2026},
+  note   = {Preprint, version 9},
+  url    = {https://github.com/HyperCoherence/CoreSignalHypothesis}
 }
 ```
 
-## Related Work
-
-This framework explains recent empirical findings:
-- **TRM:** [Tiny Recursive Networks Beat LLMs](https://arxiv.org/abs/2510.04871) - Jolicoeur-Martineau (2025)
-- **ACE:** [Coherent Contexts Prevent Performance Collapse](https://arxiv.org/abs/2510.04618) - Zhang et al. (2025)
+Version 1 is on Zenodo ([10.5281/zenodo.17314672](https://doi.org/10.5281/zenodo.17314672)) and is superseded by this version.
 
 ## Contact
 
-**Email:** public@hypercoherence.com  
+**Email:** public@hypercoherence.com
 **Website:** https://hypercoherence.com
+
+## License
+
+[CC BY 4.0](LICENSE)
